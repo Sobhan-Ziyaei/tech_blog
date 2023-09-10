@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_blog/gen/assets.gen.dart';
+import 'package:tech_blog/models/fake_data.dart';
 import 'package:tech_blog/ui/constants/strings.dart';
 import 'package:tech_blog/ui/theme/colors.dart';
 
@@ -42,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                        image: AssetImage(Assets.images.png.homePosterImg.path),
+                        image: AssetImage(mainScreenPosterMap['imageAssets']),
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -65,20 +66,30 @@ class _MainScreenState extends State<MainScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text(
-                              MainStrings.homePosterAuthor,
+                              mainScreenPosterMap['writer'],
                               style: theme.textTheme.bodySmall
                                   ?.copyWith(color: whiteColor),
                             ),
-                            Text(
-                              MainStrings.homePosterLikes,
-                              style: theme.textTheme.bodySmall
-                                  ?.copyWith(color: whiteColor),
+                            Row(
+                              children: [
+                                Text(
+                                  mainScreenPosterMap['views'],
+                                  style: theme.textTheme.bodySmall
+                                      ?.copyWith(color: whiteColor),
+                                ),
+                                const SizedBox(width: 5),
+                                const Icon(
+                                  Icons.remove_red_eye_sharp,
+                                  color: whiteColor,
+                                  size: 20,
+                                ),
+                              ],
                             ),
                           ],
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          MainStrings.homePosterTitle,
+                          mainScreenPosterMap['title'],
                           style: theme.textTheme.bodyLarge
                               ?.copyWith(color: whiteColor),
                         ),
