@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
+          scrollBehavior: MyCustomScrollBehavior(),
           theme: CustomTheme.lightTheme,
           debugShowCheckedModeBanner: false,
           localizationsDelegates: const [
@@ -50,4 +52,13 @@ class MyApp extends StatelessWidget {
       },
     );
   }
+}
+
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+        // etc.
+      };
 }

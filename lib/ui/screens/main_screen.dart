@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_blog/gen/assets.gen.dart';
 import 'package:tech_blog/models/fake_data.dart';
-import 'package:tech_blog/ui/constants/strings.dart';
 import 'package:tech_blog/ui/theme/colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -100,7 +99,42 @@ class _MainScreenState extends State<MainScreen> {
                 ],
               ),
             ),
+            const SizedBox(height: 15),
+            SizedBox(
+              height: 40,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 5,
+                  itemBuilder: (context, index) {
+                    return const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: HashTagItem(),
+                    );
+                  },
+                ),
+              ),
+            )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class HashTagItem extends StatelessWidget {
+  const HashTagItem({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: ScreenUtil().setWidth(70),
+      height: ScreenUtil().setHeight(1),
+      decoration: const BoxDecoration(
+        color: Colors.black,
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
         ),
       ),
     );
