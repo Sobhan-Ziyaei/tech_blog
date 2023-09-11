@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:tech_blog/gen/assets.gen.dart';
-import 'package:tech_blog/ui/screens/main_screen.dart';
+import 'package:tech_blog/ui/screens/main_screen/main_screen.dart';
 import 'package:tech_blog/ui/theme/colors.dart';
 
 class SplashScreen extends StatefulWidget {
