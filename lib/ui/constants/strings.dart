@@ -3,4 +3,5 @@ class MainStrings {
   static const homePosterViews = '253';
   static const homePosterTitle = 'دوازده قدم برنامه‌نویسی یک دوره‌ی...';
   static const hotArticles = 'مشاهده داغ‌ترین نوشته‌ها' ;
+  static const hotCast = 'مشاهده داغ‌ترین پادکست‌ها' ;
 }

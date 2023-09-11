@@ -6,6 +6,10 @@ import 'package:tech_blog/ui/theme/colors.dart';
 class CustomTheme {
   static ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: bgColor,
+    appBarTheme: const AppBarTheme(
+      color: bgColor,
+      elevation: 0,
+    ),
     textTheme: TextTheme(
       bodySmall: TextStyle(
         fontFamily: FontFamily.vazir,

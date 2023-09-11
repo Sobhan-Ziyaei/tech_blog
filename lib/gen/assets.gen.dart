@@ -18,20 +18,44 @@ class $AssetsImagesGen {
 class $AssetsImagesPngGen {
   const $AssetsImagesPngGen();
 
+  /// File path: assets/images/png/home_img.png
+  AssetGenImage get homeImg =>
+      const AssetGenImage('assets/images/png/home_img.png');
+
   /// File path: assets/images/png/home_poster_img.png
   AssetGenImage get homePosterImg =>
       const AssetGenImage('assets/images/png/home_poster_img.png');
+
+  /// File path: assets/images/png/microphone_img.png
+  AssetGenImage get microphoneImg =>
+      const AssetGenImage('assets/images/png/microphone_img.png');
 
   /// File path: assets/images/png/pen_img.png
   AssetGenImage get penImg =>
       const AssetGenImage('assets/images/png/pen_img.png');
 
+  /// File path: assets/images/png/profile_img.png
+  AssetGenImage get profileImg =>
+      const AssetGenImage('assets/images/png/profile_img.png');
+
   /// File path: assets/images/png/tech_logo_img.png
   AssetGenImage get techLogoImg =>
       const AssetGenImage('assets/images/png/tech_logo_img.png');
 
+  /// File path: assets/images/png/wirte_img.png
+  AssetGenImage get wirteImg =>
+      const AssetGenImage('assets/images/png/wirte_img.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [homePosterImg, penImg, techLogoImg];
+  List<AssetGenImage> get values => [
+        homeImg,
+        homePosterImg,
+        microphoneImg,
+        penImg,
+        profileImg,
+        techLogoImg,
+        wirteImg
+      ];
 }
 
 class Assets {

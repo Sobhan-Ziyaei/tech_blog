@@ -20,3 +20,13 @@ const List<Color> blogPost = [
   Color.fromARGB(255, 0, 0, 0),
   Color.fromARGB(0, 0, 0, 0),
 ];
+
+const List<Color> bottomNav = [
+  Color.fromARGB(255, 25, 0, 94),
+  Color.fromARGB(255, 68, 4, 87),
+];
+
+const List<Color> bottomNavBackground = [
+  Color.fromARGB(0, 255, 255, 255),
+  Color.fromARGB(255, 255, 255, 255),
+];
