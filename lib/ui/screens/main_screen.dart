@@ -133,6 +133,85 @@ class _MainScreenState extends State<MainScreen> {
                   )
                 ],
               ),
+            ),
+            const SizedBox(height: 20),
+            SizedBox(
+              height: ScreenUtil().setHeight(200),
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: blogList.getRange(0, 5).length,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                          right: index == 0
+                              ? ScreenUtil().setWidth(30)
+                              : ScreenUtil().setWidth(15),
+                        ),
+                        child: SizedBox(
+                          width: ScreenUtil().setWidth(150),
+                          height: ScreenUtil().setHeight(150),
+                          child: Stack(
+                            children: [
+                              PostItem(
+                                path: blogList[index].imageUrl,
+                              ),
+                              Positioned(
+                                bottom: 5,
+                                right: 0,
+                                left: 0,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Text(
+                                      blogList[index].writer,
+                                      style: theme.textTheme.bodySmall
+                                          ?.copyWith(color: whiteColor),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          mainScreenPosterMap['views'],
+                                          style: theme.textTheme.bodySmall
+                                              ?.copyWith(color: whiteColor),
+                                        ),
+                                        const SizedBox(width: 5),
+                                        const Icon(
+                                          Icons.remove_red_eye_sharp,
+                                          color: whiteColor,
+                                          size: 20,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 5),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          right: index == 0
+                              ? ScreenUtil().setWidth(30)
+                              : ScreenUtil().setWidth(15),
+                        ),
+                        child: SizedBox(
+                          width: ScreenUtil().setWidth(150),
+                          child: Text(
+                            blogList[index].title,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                          ),
+                        ),
+                      )
+                    ],
+                  );
+                },
+              ),
             )
           ],
         ),
@@ -162,6 +241,31 @@ class HashTagItem extends StatelessWidget {
         child: Text(
           '# $text',
           style: theme.textTheme.bodySmall?.copyWith(color: whiteColor),
+        ),
+      ),
+    );
+  }
+}
+
+class PostItem extends StatelessWidget {
+  PostItem({Key? key, required this.path}) : super(key: key);
+  String path;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        image: DecorationImage(
+          image: NetworkImage(path),
+          fit: BoxFit.cover,
+        ),
+      ),
+      foregroundDecoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        gradient: const LinearGradient(
+          colors: blogPost,
+          begin: Alignment.bottomCenter,
+          end: Alignment.topCenter,
         ),
       ),
     );
