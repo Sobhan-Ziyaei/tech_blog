@@ -4,6 +4,8 @@ const blackColor = Colors.black;
 const bgColor = Colors.white;
 const whiteColor = Colors.white;
 const blueColor = Color(0xff286BB8);
+const dividerColor = Color.fromARGB(255, 112, 112, 112);
+const primaryColor = Color.fromARGB(255, 25, 0, 94) ;
 
 const List<Color> homePosterCoverGradient = [
   Color.fromARGB(0, 0, 0, 0),

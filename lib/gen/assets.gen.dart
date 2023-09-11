@@ -34,6 +34,10 @@ class $AssetsImagesPngGen {
   AssetGenImage get penImg =>
       const AssetGenImage('assets/images/png/pen_img.png');
 
+  /// File path: assets/images/png/profile_avatar_img.png
+  AssetGenImage get profileAvatarImg =>
+      const AssetGenImage('assets/images/png/profile_avatar_img.png');
+
   /// File path: assets/images/png/profile_img.png
   AssetGenImage get profileImg =>
       const AssetGenImage('assets/images/png/profile_img.png');
@@ -52,6 +56,7 @@ class $AssetsImagesPngGen {
         homePosterImg,
         microphoneImg,
         penImg,
+        profileAvatarImg,
         profileImg,
         techLogoImg,
         wirteImg

@@ -1,9 +1,9 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_blog/gen/assets.gen.dart';
-import 'package:tech_blog/models/fake_data.dart';
-import 'package:tech_blog/ui/constants/strings.dart';
-import 'package:tech_blog/ui/screens/main_screen/home_screen.dart';
+import 'package:tech_blog/ui/screens/main_screen/profile_screen.dart';
 import 'package:tech_blog/ui/theme/colors.dart';
 
 class MainScreen extends StatefulWidget {
@@ -35,7 +35,8 @@ class _MainScreenState extends State<MainScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            HomeScreen(theme: theme),
+            
+            Positioned.fill(child: ProfileScreen(theme: theme)) ,
             Positioned(
               bottom: 0,
               right: 0,
