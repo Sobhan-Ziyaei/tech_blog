@@ -6,12 +6,20 @@ class MainStrings {
   static const hotCast = 'مشاهده داغ‌ترین پادکست‌ها';
 }
 
-
 class ProfileScreenStrings {
-  static const modifyProfileAvatar = 'ویرایش عکس پروفایل' ;
-  static const sampleUserName = 'سبحان ضیائی' ;
-  static const sampleUserEmail = 'sobhan.ziaee73@gmail.com' ;
-  static const favoriteArticles = 'مقالات مورد علاقه من' ;
-  static const favoriteCast = 'پادکست‌های مورد علاقه من' ;
-  static const exitProfile = 'خروج از حساب کاربری' ;
+  static const modifyProfileAvatar = 'ویرایش عکس پروفایل';
+  static const sampleUserName = 'سبحان ضیائی';
+  static const sampleUserEmail = 'sobhan.ziaee73@gmail.com';
+  static const favoriteArticles = 'مقالات مورد علاقه من';
+  static const favoriteCast = 'پادکست‌های مورد علاقه من';
+  static const exitProfile = 'خروج از حساب کاربری';
+}
+
+class RegisterScreenStrings {
+  static const welcome = """به تک‌بلاگ خوش اومدی
+
+برای ارسال مطلب و پادکست باید حتما 
+ثبت نام کنی """;
+
+static const letsGo = 'بزن بریم' ;
 }
