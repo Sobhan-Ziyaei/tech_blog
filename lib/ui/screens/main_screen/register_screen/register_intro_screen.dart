@@ -35,7 +35,68 @@ class _RegisterIntroScreenState extends State<RegisterIntroScreen> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: ScreenUtil().setHeight(30)),
-              MainButton(customTheme: widget)
+              MainButton(
+                customTheme: widget,
+                onPressed: () {
+                  showModalBottomSheet(
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    context: context,
+                    builder: (context) {
+                      return Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).viewInsets.bottom),
+                        child: Container(
+                          height: ScreenUtil().setHeight(400),
+                          decoration: const BoxDecoration(
+                            color: whiteColor,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30),
+                              topRight: Radius.circular(30),
+                            ),
+                          ),
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(RegisterScreenStrings.insertEmail,
+                                    style: widget.theme.textTheme.bodyMedium),
+                                SizedBox(height: ScreenUtil().setHeight(20)),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: ScreenUtil().setWidth(30)),
+                                  child: TextField(
+                                    textAlign: TextAlign.center,
+                                    decoration: InputDecoration(
+                                      hintText:
+                                          RegisterScreenStrings.sampleEmail,
+                                      hintStyle: widget
+                                          .theme.textTheme.bodyMedium
+                                          ?.copyWith(color: Colors.grey),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: ScreenUtil().setHeight(40)),
+                                MainButton(
+                                  customTheme: widget,
+                                  onPressed: () {},
+                                  buttonText:
+                                      RegisterScreenStrings.continueText,
+                                  width: 200,
+                                  heigh: 50,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                },
+                buttonText: RegisterScreenStrings.letsGo,
+                heigh: 40,
+                width: 40,
+              )
             ],
           ),
         ),
@@ -43,5 +104,3 @@ class _RegisterIntroScreenState extends State<RegisterIntroScreen> {
     );
   }
 }
-
-

@@ -21,5 +21,8 @@ class RegisterScreenStrings {
 برای ارسال مطلب و پادکست باید حتما 
 ثبت نام کنی """;
 
-static const letsGo = 'بزن بریم' ;
+  static const letsGo = 'بزن بریم';
+  static const insertEmail = 'لطفاً ایمیلت را وارد کن';
+  static const sampleEmail = 'techblog@gmail.com' ;
+  static const continueText = 'ادامه' ;
 }

@@ -8,19 +8,25 @@ class MainButton extends StatelessWidget {
   const MainButton({
     super.key,
     required this.customTheme,
+    required this.onPressed,
+    required this.buttonText,
+    required this.width ,
+    required this.heigh ,
   });
 
   final RegisterIntroScreen customTheme;
+  final Function() onPressed;
+  final String buttonText;
+  final int width ;
+  final int heigh ;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ButtonStyle(
         minimumSize: MaterialStatePropertyAll(
-            Size(ScreenUtil().setWidth(100), ScreenUtil().setHeight(40))),
-        maximumSize: MaterialStatePropertyAll(
-            Size(ScreenUtil().setWidth(200), ScreenUtil().setHeight(80))),
+            Size(ScreenUtil().setWidth(width), ScreenUtil().setHeight(heigh))),
         backgroundColor: MaterialStateProperty.resolveWith(
           (states) {
             if (states.contains(MaterialState.pressed)) {
@@ -49,7 +55,7 @@ class MainButton extends StatelessWidget {
           },
         ),
       ),
-      child: const Text(RegisterScreenStrings.letsGo),
+      child: Text(buttonText),
     );
   }
 }

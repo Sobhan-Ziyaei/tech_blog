@@ -10,6 +10,12 @@ class CustomTheme {
       color: bgColor,
       elevation: 0,
     ),
+    inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderSide: const BorderSide(width: 2),
+        borderRadius: BorderRadius.circular(15),
+      ),
+    ),
     textTheme: TextTheme(
       bodySmall: TextStyle(
         fontFamily: FontFamily.vazir,
