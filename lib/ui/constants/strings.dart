@@ -31,5 +31,7 @@ class RegisterScreenStrings {
 class MyCategoryScreenStrings {
   static const welcomeCategoryScreen = """تبریک میگم ، ایمیل با موفقیت تایید شد
 لطفا اطلاعات ثبت نام رو کامل کن""";
-
+  static const name = 'نام و نام خانوادگی';
+  static const selectedYouCategory =
+      """دسته بندی هایی که دوست داری رو انتخاب کن""";
 }

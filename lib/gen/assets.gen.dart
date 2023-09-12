@@ -69,12 +69,16 @@ class $AssetsImagesPngGen {
 class $AssetsImagesSvgGen {
   const $AssetsImagesSvgGen();
 
+  /// File path: assets/images/svg/arrow_down_img.svg
+  SvgGenImage get arrowDownImg =>
+      const SvgGenImage('assets/images/svg/arrow_down_img.svg');
+
   /// File path: assets/images/svg/register_img.svg
   SvgGenImage get registerImg =>
       const SvgGenImage('assets/images/svg/register_img.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [registerImg];
+  List<SvgGenImage> get values => [arrowDownImg, registerImg];
 }
 
 class Assets {

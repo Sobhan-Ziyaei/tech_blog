@@ -20,6 +20,10 @@ List<HashTag> tagList = [
   HashTag(title: 'دارت'),
 ];
 
+//
+
+List<HashTag> selectedTags = [] ;
+
 //blog fake data
 List<Blog> blogList = [
   Blog(
