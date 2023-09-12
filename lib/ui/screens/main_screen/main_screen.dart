@@ -1,8 +1,7 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_blog/gen/assets.gen.dart';
+import 'package:tech_blog/ui/screens/main_screen/home_screen.dart';
 import 'package:tech_blog/ui/screens/main_screen/profile_screen.dart';
 import 'package:tech_blog/ui/theme/colors.dart';
 
@@ -14,6 +13,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  int selectedPageScreen = 0;
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
@@ -35,8 +35,12 @@ class _MainScreenState extends State<MainScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            
-            Positioned.fill(child: ProfileScreen(theme: theme)) ,
+            Positioned.fill(
+              child: IndexedStack(
+                index: selectedPageScreen,
+                children: mainScreenPage(theme),
+              ),
+            ),
             Positioned(
               bottom: 0,
               right: 0,
@@ -65,9 +69,24 @@ class _MainScreenState extends State<MainScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Assets.images.png.homeImg.image(scale: 2.5),
-                        Assets.images.png.wirteImg.image(scale: 2.5),
-                        Assets.images.png.profileImg.image(scale: 2.5),
+                        IconButton(
+                            onPressed: () {
+                              setState(() {
+                                selectedPageScreen = 0;
+                              });
+                            },
+                            icon: Assets.images.png.homeImg.image(scale: 2.5)),
+                        IconButton(
+                            onPressed: () {},
+                            icon: Assets.images.png.wirteImg.image(scale: 2.5)),
+                        IconButton(
+                            onPressed: () {
+                              setState(() {
+                                selectedPageScreen = 1;
+                              });
+                            },
+                            icon:
+                                Assets.images.png.profileImg.image(scale: 2.5)),
                       ],
                     ),
                   ),
@@ -78,5 +97,12 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
     );
+  }
+
+  List<Widget> mainScreenPage(ThemeData theme) {
+    return [
+      HomeScreen(theme: theme),
+      ProfileScreen(theme: theme),
+    ];
   }
 }
