@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_blog/gen/assets.gen.dart';
 import 'package:tech_blog/ui/screens/main_screen/home_screen.dart';
 import 'package:tech_blog/ui/screens/main_screen/profile_screen.dart';
-import 'package:tech_blog/ui/screens/main_screen/register_screen/register_intro_screen.dart';
+import 'package:tech_blog/ui/screens/register_intro_screen.dart';
 import 'package:tech_blog/ui/theme/colors.dart';
 
 class MainScreen extends StatefulWidget {

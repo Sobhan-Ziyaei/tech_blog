@@ -23,6 +23,13 @@ class RegisterScreenStrings {
 
   static const letsGo = 'بزن بریم';
   static const insertEmail = 'لطفاً ایمیلت را وارد کن';
-  static const sampleEmail = 'techblog@gmail.com' ;
-  static const continueText = 'ادامه' ;
+  static const insertPhoneCode = 'کد فعال سازی را وارد کن';
+  static const sampleEmail = 'techblog@gmail.com';
+  static const continueText = 'ادامه';
+}
+
+class MyCategoryScreenStrings {
+  static const welcomeCategoryScreen = """تبریک میگم ، ایمیل با موفقیت تایید شد
+لطفا اطلاعات ثبت نام رو کامل کن""";
+
 }
