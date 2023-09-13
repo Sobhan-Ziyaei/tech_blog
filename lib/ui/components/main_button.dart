@@ -14,7 +14,7 @@ class MainButton extends StatelessWidget {
     required this.heigh,
   });
 
-  final RegisterIntroScreen customTheme;
+  final ThemeData customTheme;
   final Function() onPressed;
   final String buttonText;
   final int width;
@@ -41,9 +41,9 @@ class MainButton extends StatelessWidget {
           textStyle: MaterialStateProperty.resolveWith(
             (states) {
               if (states.contains(MaterialState.pressed)) {
-                return customTheme.theme.textTheme.bodyLarge;
+                return customTheme.textTheme.bodyLarge;
               } else {
-                return customTheme.theme.textTheme.bodyMedium;
+                return customTheme.textTheme.bodyMedium;
               }
             },
           ),

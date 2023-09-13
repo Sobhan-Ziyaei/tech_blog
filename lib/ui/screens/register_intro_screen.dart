@@ -18,6 +18,8 @@ class RegisterIntroScreen extends StatefulWidget {
 class _RegisterIntroScreenState extends State<RegisterIntroScreen> {
   @override
   Widget build(BuildContext context) {
+        ThemeData theme = Theme.of(context);
+
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -38,7 +40,7 @@ class _RegisterIntroScreenState extends State<RegisterIntroScreen> {
               ),
               SizedBox(height: ScreenUtil().setHeight(30)),
               MainButton(
-                customTheme: widget,
+                customTheme: theme,
                 onPressed: () {
                   showEmailModalSheet(context);
                 },
@@ -54,6 +56,8 @@ class _RegisterIntroScreenState extends State<RegisterIntroScreen> {
   }
 
   Future<dynamic> showEmailModalSheet(BuildContext context) {
+        ThemeData theme = Theme.of(context);
+
     return showModalBottomSheet(
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
@@ -96,7 +100,7 @@ class _RegisterIntroScreenState extends State<RegisterIntroScreen> {
                   ),
                   SizedBox(height: ScreenUtil().setHeight(40)),
                   MainButton(
-                    customTheme: widget,
+                    customTheme: theme,
                     onPressed: () {
                       Navigator.pop(context);
                       showPhoneCodeModalSheet(context);
@@ -115,6 +119,7 @@ class _RegisterIntroScreenState extends State<RegisterIntroScreen> {
   }
 
   Future<dynamic> showPhoneCodeModalSheet(BuildContext context) {
+    ThemeData theme = Theme.of(context);
     return showModalBottomSheet(
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
@@ -157,7 +162,7 @@ class _RegisterIntroScreenState extends State<RegisterIntroScreen> {
                   ),
                   SizedBox(height: ScreenUtil().setHeight(40)),
                   MainButton(
-                    customTheme: widget,
+                    customTheme: theme,
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, MyCategory.screenId);
                     },

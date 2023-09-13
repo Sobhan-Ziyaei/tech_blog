@@ -85,7 +85,11 @@ class _MyCategoryState extends State<MyCategory> {
                         child: InkWell(
                           onTap: () {
                             setState(() {
-                              selectedTags.add(tagList[index]);
+                              if (!selectedTags.contains(tagList[index])) {
+                                selectedTags.add(tagList[index]);
+                              } else {
+                                print('${selectedTags[index].title} is exist');
+                              }
                             });
                           },
                           child: HashTagItem(text: tagList[index].title),
@@ -129,7 +133,14 @@ class _MyCategoryState extends State<MyCategory> {
                     },
                   ),
                 ),
-                const Spacer(),
+                SizedBox(height: ScreenUtil().setHeight(10)),
+                MainButton(
+                  customTheme: theme,
+                  onPressed: () {},
+                  buttonText: RegisterScreenStrings.continueText,
+                  width: 150,
+                  heigh: 50,
+                ),
               ],
             ),
           ),

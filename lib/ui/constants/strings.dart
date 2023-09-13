@@ -34,4 +34,10 @@ class MyCategoryScreenStrings {
   static const name = 'نام و نام خانوادگی';
   static const selectedYouCategory =
       """دسته بندی هایی که دوست داری رو انتخاب کن""";
+
+  static const profile = 'پروفایل کاربری' ;
+  static const aboutTechBlog = 'درباره تک بلاگ' ;
+  static const shareTechBlog = 'اشتراک‌ گذاری تک بلاگ' ;
+  static const githubTechBlog = 'تک بلاگ در گیت هاب' ;
+
 }
